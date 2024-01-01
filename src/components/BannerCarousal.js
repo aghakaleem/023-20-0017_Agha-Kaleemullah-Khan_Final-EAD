@@ -19,10 +19,11 @@ const BannerCarousel = () => {
             .catch(err => {
                 console.error(err);
             });
+
     }, []);
 
     return (
-        <Carousel className={"mt-4"} activeIndex={index} onSelect={handleSelect}>
+        <Carousel variant="dark" className={"mt-4"} activeIndex={index} onSelect={handleSelect}>
             {products.map((product, index) => (
                 <Carousel.Item key={index}>
                     <Container>

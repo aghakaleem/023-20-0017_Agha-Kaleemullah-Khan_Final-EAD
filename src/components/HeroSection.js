@@ -1,8 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
-import image from '../assets/images/callsense.png'
+
 import BannerCarousel from "./BannerCarousal";
 import {Col, Container, Row} from "react-bootstrap";
-import banner1 from "../assets/images/banner1.jpeg";
 import React from "react";
 function HeroSection() {
     return (
@@ -12,16 +11,18 @@ function HeroSection() {
                 <Container>
                     <Row>
 
-                        <Col lg={5} xs={12} className={"banner-text pt-5 ps-5 justify-content-center align-items-center"}>
+                        <Col lg={12} xs={12} className={"banner-text pt-5 ps-5 d-flex justify-content-center align-items-center"}>
 
-                            <h1 >Welcome to Agha Shop</h1>
-                            <p>Where you will find every kind of categories of products</p>
+                            <div className="text-center">
+                                <h1>Discover New Arrivals</h1>
+                                <p>Recently added shirts!</p>
+                            </div>
 
                         </Col>
 
-                        <Col lg={7} xs={12}>
-                            <img className="banner-image w-100 float-end" src={banner1} alt={"banner image"} />
-                        </Col>
+                        {/*<Col lg={7} xs={12}>*/}
+                        {/*    <img className="banner-image w-100 float-end" src={banner1} alt={"banner image"} />*/}
+                        {/*</Col>*/}
 
                     </Row>
                 </Container>

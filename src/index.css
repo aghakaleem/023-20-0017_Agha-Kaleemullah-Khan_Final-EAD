@@ -109,6 +109,13 @@
     object-fit: cover;
 }
 
+
+.product-detail-image{
+    max-width: 100%;
+    max-height: 400px; /* Adjust this value as needed */
+    object-fit: contain;
+}
+
 .banner-image {
     max-width: 100%;
     max-height: 500px; /* Adjust this value as needed */
@@ -117,7 +124,6 @@
 
 .banner-text{
     vertical-align: center;
-    font-size: 3vw;
 }
 
 

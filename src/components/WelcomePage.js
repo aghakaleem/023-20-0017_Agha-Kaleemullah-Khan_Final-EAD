@@ -1,19 +1,19 @@
 import HeroSection from "./HeroSection";
-import Projects from "./Projects";
 import ContactUs from "./ContactUs";
-import SocialMediaProfiles from "./SocialMediaProfiles";
+
 import {ProductDescription} from "./ProductDetail";
 import BannerCarousal from "./BannerCarousal";
-
-
+import NewArrivals from "./NewArrivals";
+import BlackBoxes from "./BlackBoxes";
+import TopSellProducts from "./TopSellProducts";
 function WelcomePage() {
     return (
         <>
             <HeroSection />
+            <NewArrivals />
+            <BlackBoxes />
+            <TopSellProducts />
             <BannerCarousal />
-            <SocialMediaProfiles />
-            <Projects />
-            <ContactUs />
         </>
     );
 }

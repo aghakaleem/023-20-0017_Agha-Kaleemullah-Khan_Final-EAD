@@ -1,46 +1,62 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import {Link} from "react-router-dom";
-
+import payment from "../assets/images/payments.png";
 const Footer = () => {
     return (
-        <footer className="bg-dark" id="footer">
+        <footer className="bg-light" id="footer">
             <Container>
                 <Row>
-                    <Col md={4} className="pt-5">
-                        <h2 className="h2 text-success border-bottom pb-3 border-light logo">Shop</h2>
+                    <Col md={3} className="pt-5">
+                        <h5 className="h5 border-bottom pb-3 border-dark">Company Info</h5>
                         <ul className="list-unstyled text-light footer-link-list">
                             <li>
                                 <i className="fas fa-map-marker-alt fa-fw"></i>
-                                123 Consectetur at ligula 10660
+                                <Link style={{textDecoration: 'none', color: 'black'}} to={"/"}> About Us </Link>
                             </li>
                             <li>
                                 <i className="fa fa-phone fa-fw"></i>
-                                <a className="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                                <Link style={{textDecoration: 'none', color: 'black'}} to={"/products"}> Products </Link>
                             </li>
                             <li>
                                 <i className="fa fa-envelope fa-fw"></i>
-                                <a className="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                                <Link style={{textDecoration: 'none', color: 'black'}} to={"/contact-us"}> Contact Us </Link>
+                            </li>
+                            <li>
+                                <i className="fa fa-envelope fa-fw"></i>
+                                <Link style={{textDecoration: 'none', color: 'black'}} to={"/products"}> Shop </Link>
                             </li>
                         </ul>
                     </Col>
 
-                    <Col md={4} className="pt-5">
-                        <h2 className="h2 text-light border-bottom pb-3 border-light">Products</h2>
+                    <Col md={3} className="pt-5">
+                        <h5 className="h5 text-dark border-bottom pb-3 border-dark">Help Links</h5>
                         <ul className="list-unstyled text-light footer-link-list">
-                            <li> <Link to={`/category-products/jewelery`} className="btn btn-dark">Jewellery</Link></li>
-                            <li><Link to={"/category-products/men's clothing"} className="btn btn-dark">Men's Clothing</Link></li>
-                            <li><Link to={"/category-products/women's clothing"} className="btn btn-dark">Women's Clothing</Link></li>
-                            <li><Link to={"/category-products/electronics"} className="btn btn-dark">Electronics</Link></li>
+                            <li> <Link  style={{textDecoration: 'none', color: 'black'}} to={`/category-products/jewelery`} >Jewellery</Link></li>
+                            <li><Link style={{textDecoration: 'none', color: 'black'}} to={"/category-products/men's clothing"} >Men's Clothing</Link></li>
+                            <li><Link style={{textDecoration: 'none', color: 'black'}} to={"/category-products/women's clothing"} >Women's Clothing</Link></li>
+                            <li><Link style={{textDecoration: 'none', color: 'black'}} to={"/category-products/electronics"} >Electronics</Link></li>
                         </ul>
-                        men's clothing
+
                     </Col>
 
-                    <Col md={4} className="pt-5">
-                        <h2 className="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
+                    <Col md={3} className="pt-5">
+                        <h5 className="h5 text-dark border-bottom pb-3 border-dark">Useful Links</h5>
                         <ul className="list-unstyled text-light footer-link-list">
-                            <li><Link to={"/"} className="btn btn-dark">Home</Link></li>
-                            <li><a className="text-decoration-none" href="#">Contact</a></li>
+                            <li><a style={{textDecoration: 'none', color: 'black'}} className="text-decoration-none" href="#">Special Offers</a></li>
+                            <li><a style={{textDecoration: 'none', color: 'black'}} className="text-decoration-none" href="#">Gift Cards</a></li>
+                            <li><a style={{textDecoration: 'none', color: 'black'}} className="text-decoration-none" href="#">Advertising</a></li>
+                            <li><a style={{textDecoration: 'none', color: 'black'}} className="text-decoration-none" href="#">Terms of Use</a></li>
+                        </ul>
+                    </Col>
+                    <Col md={3} className="pt-5">
+                        <h5 className="h5 text-dark border-bottom pb-3 border-dark">Get in the Know</h5>
+                        <ul className="list-unstyled text-light footer-link-list">
+                            <label className="sr-only" htmlFor="subscribeEmail">Email address</label>
+                            <div className="input-group mb-2">
+                                <input type="text" className="form-control bg-light border-light" id="subscribeEmail" placeholder="Email address" />
+                                <div className="input-group-text  text-dark"> > </div>
+                            </div>
                         </ul>
                     </Col>
                 </Row>
@@ -66,23 +82,28 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div className="col-auto">
-                        <label className="sr-only" htmlFor="subscribeEmail">Email address</label>
-                        <div className="input-group mb-2">
-                            <input type="text" className="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address" />
-                            <div className="input-group-text btn-success text-light">Subscribe</div>
-                        </div>
+
                     </div>
                 </Row>
             </Container>
 
-            <div className="w-100 bg-black py-3">
+            <div className="w-100 bg-light py-3 border-top">
                 <Container>
                     <Row className="pt-2">
-                        <div className="col-12">
-                            <p className="text-left text-light">
-                                Copyright &copy; 2021 Company Name
+                        <Col md={6} lg={6}>
+                            <p className="text-left text-dark">
+                                © 2020 FasTech Systems Private Limited Sukkur, &nbsp;
+
                             </p>
-                        </div>
+                            <p className="text-left text-dark">
+                                Privacy Policy
+                                Terms & Conditions
+                            </p>
+                        </Col>
+                        <Col md={6} lg={6}>
+                            <img className={"float-end"} src={payment} alt="payment image"/>
+                        </Col>
+
                     </Row>
                 </Container>
             </div>
